@@ -1,0 +1,47 @@
+﻿{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "precatorio_id": {
+      "type": "string",
+      "title": "ID do Precatório"
+    },
+    "acao": {
+      "type": "string",
+      "title": "Ação",
+      "enum": [
+        "Cadastro",
+        "Cálculo",
+        "Edição",
+        "Exclusão",
+        "Exportação",
+        "Recálculo"
+      ]
+    },
+    "descricao": {
+      "type": "string",
+      "title": "Descrição"
+    },
+    "dados_anteriores": {
+      "type": "string",
+      "title": "Dados Anteriores (JSON)"
+    },
+    "dados_novos": {
+      "type": "string",
+      "title": "Dados Novos (JSON)"
+    },
+    "versao": {
+      "type": "number",
+      "title": "Versão do Cálculo"
+    },
+    "ip_address": {
+      "type": "string",
+      "title": "IP"
+    }
+  },
+  "required": [
+    "precatorio_id",
+    "acao",
+    "descricao"
+  ]
+}

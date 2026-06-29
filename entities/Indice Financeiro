@@ -1,0 +1,41 @@
+{
+  "name": "IndiceFinanceiro",
+  "type": "object",
+  "properties": {
+    "tipo": {
+      "type": "string",
+      "title": "Tipo de \u00cdndice",
+      "enum": [
+        "IPCA-E",
+        "SELIC"
+      ]
+    },
+    "ano": {
+      "type": "number",
+      "title": "Ano"
+    },
+    "mes": {
+      "type": "number",
+      "title": "M\u00eas"
+    },
+    "valor": {
+      "type": "number",
+      "title": "Valor do \u00cdndice (%)"
+    },
+    "acumulado_ano": {
+      "type": "number",
+      "title": "Acumulado no Ano (%)"
+    },
+    "fonte": {
+      "type": "string",
+      "title": "Fonte",
+      "default": "IBGE/BCB"
+    }
+  },
+  "required": [
+    "tipo",
+    "ano",
+    "mes",
+    "valor"
+  ]
+}

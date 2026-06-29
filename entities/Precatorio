@@ -1,0 +1,132 @@
+{
+  "name": "Precatorio",
+  "type": "object",
+  "properties": {
+    "numero_processo": {
+      "type": "string",
+      "title": "N\u00famero do Processo"
+    },
+    "numero_precatorio": {
+      "type": "string",
+      "title": "N\u00famero do Precat\u00f3rio"
+    },
+    "tribunal": {
+      "type": "string",
+      "title": "Tribunal",
+      "enum": [
+        "TJSP",
+        "TRF3",
+        "TRT2",
+        "TRT15",
+        "Outro"
+      ]
+    },
+    "data_transito_julgado": {
+      "type": "string",
+      "format": "date",
+      "title": "Data do Tr\u00e2nsito em Julgado"
+    },
+    "data_base_conta": {
+      "type": "string",
+      "format": "date",
+      "title": "Data-Base da Conta Judicial"
+    },
+    "data_inscricao": {
+      "type": "string",
+      "format": "date",
+      "title": "Data da Inscri\u00e7\u00e3o do Precat\u00f3rio"
+    },
+    "valor_principal": {
+      "type": "number",
+      "title": "Valor Principal (R$)"
+    },
+    "valor_honorarios": {
+      "type": "number",
+      "title": "Honor\u00e1rios (R$)",
+      "default": 0
+    },
+    "valor_juros_original": {
+      "type": "number",
+      "title": "Juros da Conta Original (R$)",
+      "default": 0
+    },
+    "data_prevista_pagamento": {
+      "type": "string",
+      "format": "date",
+      "title": "Data Prevista para Pagamento"
+    },
+    "ente_devedor": {
+      "type": "string",
+      "title": "Ente Devedor",
+      "default": "Estado de S\u00e3o Paulo"
+    },
+    "natureza": {
+      "type": "string",
+      "title": "Natureza",
+      "enum": [
+        "Alimentar",
+        "Comum"
+      ],
+      "default": "Comum"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "Cadastrado",
+        "Calculado",
+        "Em Revis\u00e3o",
+        "Finalizado"
+      ],
+      "default": "Cadastrado"
+    },
+    "valor_atualizado": {
+      "type": "number",
+      "title": "Valor Atualizado (R$)"
+    },
+    "valor_consolidado_nov2021": {
+      "type": "number",
+      "title": "Valor Consolidado Nov/2021 (R$)"
+    },
+    "percentual_correcao": {
+      "type": "number",
+      "title": "Percentual Acumulado de Corre\u00e7\u00e3o (%)"
+    },
+    "dentro_prazo_constitucional": {
+      "type": "boolean",
+      "title": "Dentro do Prazo Constitucional"
+    },
+    "metodo_selic": {
+      "type": "string",
+      "title": "M\u00e9todo SELIC",
+      "enum": [
+        "Linear",
+        "Acumulada"
+      ],
+      "default": "Linear"
+    },
+    "memoria_calculo": {
+      "type": "string",
+      "title": "Mem\u00f3ria de C\u00e1lculo (JSON)"
+    },
+    "documentos": {
+      "type": "array",
+      "title": "Documentos Anexados",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notas": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es"
+    }
+  },
+  "required": [
+    "numero_processo",
+    "numero_precatorio",
+    "tribunal",
+    "data_base_conta",
+    "data_inscricao",
+    "valor_principal"
+  ]
+}
